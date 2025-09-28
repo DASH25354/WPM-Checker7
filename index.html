@@ -171,16 +171,20 @@ function finishReading() {
   if (!startTime) return alert("Please start reading first!");
   const elapsedSec = (Date.now() - startTime) / 1000;
 
-  const correctAnswers = ["a","c"];
+  const correctAnswers = ["a","c"]; // 例
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
   const numCorrect = checked.filter(val => correctAnswers.includes(val)).length;
   const numIncorrect = checked.filter(val => !correctAnswers.includes(val)).length;
 
-  // 正しい答えの比率から、誤答ごとに50%減点
-  let accuracy = numCorrect / correctAnswers.length;
-  if(numIncorrect > 0) {
-    accuracy *= Math.pow(0.5, numIncorrect);
+  // 新ロジック
+  let accuracy = 0;
+  if (numIncorrect >= correctAnswers.length) {
+    accuracy = 0;
+  } else {
+    accuracy = 1 - (numIncorrect / correctAnswers.length);
   }
+  // 正解がない場合も0%
+  if (numCorrect === 0) accuracy = 0;
 
   const rawWPM = (wordCount / elapsedSec) * 60;
   const finalWPM = Math.round(rawWPM * accuracy);
@@ -195,5 +199,6 @@ function finishReading() {
 
 </body>
 </html>
+
 
 
