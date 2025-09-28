@@ -14,16 +14,24 @@
 
 <h2>Three-minute Training</h2>
 
+<style>
+  audio {
+    display: block;      /* ブロック表示にして余白を効かせる */
+    margin-bottom: 3em;  /* 下に3行分の余白 */
+  }
+</style>
+  
 <!-- 音声再生 -->
 <h3>Listen to the audio:</h3>
 <audio controls>
-  <source src="85. Gemini 1.5.mp3" type="audio/mpeg">
+  <source src="2.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
+  
 <!-- テキスト -->
 <div id="text">
-【1】Gemini Robotics 1.5 is a new AI model. It helps robots see, think, and act in the real world. Robots with Gemini Robotics 1.5 can do many jobs. They can work with people, use tools, and solve problems. They do not need to be trained for every job; they can learn and try new things. This model is safe, smart, and works well. It is easy for developers to use. Gemini Robotics 1.5 helps robots finish tasks step by step. It is good for schools, homes, and factories. Now, robots can help people more. They can understand and move around. Gemini Robotics 1.5 makes robots helpful in our life.
+【2】The Osaka-Kansai Expo started in April with the theme “Designing Future Society for Our Lives.” Now, there are only 15 days left until the Expo closes next month. Up to June 27, more than 22 million people visited the Expo. This is more than the number needed for a positive budget. Every day, over 200,000 people visit. If this continues, about 25 million people will visit in total. This number will be higher than the Expo held in Aichi in 2005. At this Expo, people must book a date and time before coming. Now, most of the tickets for the final days are taken. Many people are trying to visit before the closing. The organizers say tickets cannot be refunded, so people with unused tickets have a problem at the end.
 </div>
 
 <!-- スタート・フィニッシュボタン -->
@@ -36,11 +44,13 @@
 <div id="questions">
   <h3>Quiz</h3>
   <label>Select all options below that match the content of the passage. (Select all that apply)</label><br>
-  <input type="checkbox" class="q1" value="a"> It helps robots work with people.<br>
-  <input type="checkbox" class="q1" value="b"> Robots using Gemini Robotics 1.5 need training for every job.
+  <input type="checkbox" class="q1" value="a"> The Expo will continue for another two months.
 <br>
-  <input type="checkbox" class="q1" value="c"> Robots can move and act in the real world with Gemini Robotics 1.5.<br>
-  <input type="checkbox" class="q1" value="d"> Gemini Robotics 1.5 is not safe for school.
+  <input type="checkbox" class="q1" value="b"> People need to book a date and time before visiting the Expo.
+<br>
+  <input type="checkbox" class="q1" value="c"> All tickets can be refunded at any time.
+<br>
+  <input type="checkbox" class="q1" value="d"> More people have visited than the number needed for a positive budget.
 <br>
 </div>
 
@@ -86,3 +96,4 @@ function finishReading() {
 
 </body>
 </html>
+
