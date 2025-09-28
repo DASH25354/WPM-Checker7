@@ -174,7 +174,13 @@ function finishReading() {
   const correctAnswers = ["a","c"];
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
   const numCorrect = checked.filter(val => correctAnswers.includes(val)).length;
-  const accuracy = numCorrect / correctAnswers.length;
+  const numIncorrect = checked.filter(val => !correctAnswers.includes(val)).length;
+
+  // 正しい答えの比率から、誤答ごとに50%減点
+  let accuracy = numCorrect / correctAnswers.length;
+  if(numIncorrect > 0) {
+    accuracy *= Math.pow(0.5, numIncorrect);
+  }
 
   const rawWPM = (wordCount / elapsedSec) * 60;
   const finalWPM = Math.round(rawWPM * accuracy);
@@ -189,4 +195,5 @@ function finishReading() {
 
 </body>
 </html>
+
 
