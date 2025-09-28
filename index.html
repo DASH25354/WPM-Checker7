@@ -3,55 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <title>WPM Quiz with Audio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  body { font-family: Arial, sans-serif; padding: 30px; }
-  #text { border: 1px solid #ccc; padding: 30px; margin-bottom: 30px; background: #f9f9f9; }
+  body { 
+    font-family: Arial, sans-serif; 
+    padding: 30px; 
+    font-size: 1.5em;
+    padding-top: 140px; /* PCデフォルト */
+    box-sizing: border-box;
+  }
+
+  h2, h3 {
+    font-size: 1.5em;
+  }
+
+  audio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: scale(1.5);
+    transform-origin: top left;
+    z-index: 1000;
+    background: #fff;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+
+  button {
+    font-size: 1.5em; 
+    padding: 15px 30px;
+    margin: 10px;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+  }
+
+  #text { 
+    border: 1px solid #ccc; 
+    padding: 30px; 
+    margin-bottom: 30px; 
+    background: #f9f9f9; 
+  }
+
   #controls { margin: 30px 0; }
   #questions { margin-top: 30px; }
+
+  /* チェックボックスの選択肢に余白をあける */
+  .question-option {
+    display: block;
+    margin-bottom: 18px; /* 好みで調整、1行分空ける */
+  }
+
+  /* --- モバイル用スタイル --- */
+  @media (max-width: 600px) {
+    body { 
+      padding-top: 70px; /* オーディオ分の余白を小さく */
+      font-size: 1.1em;
+    }
+    audio {
+      transform: none;    /* 拡大せず標準サイズ */
+      height: 44px;       /* iOSやAndroid標準UIに合わせる */
+      top: 8px;           /* アドレスバーを避けて少し下げる */
+      padding: 0;
+    }
+    #text { padding: 15px; }
+    button {
+      font-size: 1em;
+      padding: 10px 16px;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+    /* モバイルでもチェックボックス選択肢に余白を */
+    .question-option {
+      margin-bottom: 16px;
+    }
+  }
 </style>
 </head>
 <body>
 
 <h2>Three-minute Training</h2>
 
-<style>
-  audio {
-    display: block;      /* ブロック表示にして余白を効かせる */
-    margin-bottom: 3em;  /* 下に3行分の余白 */
-  }
-</style>
-  
 <!-- 音声再生 -->
-<h3>Listen to the audio:</h3>
 <audio controls>
   <source src="5.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
-
   
 <!-- テキスト -->
 <div id="text">
 【5】Snowman is a famous Japanese music band. The band has nine members. They are known for their strong dancing and beautiful singing. Snowman’s songs are popular with many people, young and old. The members got together in 2012, and they worked very hard. Their first major CD came out in 2020. Since then, Snowman has become more and more popular in Japan. They often appear on TV shows and concerts. Fans love Snowman because the members are friendly and fun. They help each other and enjoy working together. Their music makes people happy and gives energy. Many people say Snowman’s live performances are exciting and full of power. Their dream is to sing to even more people in the future. Snowman wants everyone to smile and enjoy music with them.
 </div>
 
-<!-- スタート・フィニッシュボタン -->
 <div id="controls">
   <button onclick="startReading()">▶ Start</button>
   <button onclick="finishReading()">⏹ Finish</button>
 </div>
 
-<!-- 4択クイズ -->
 <div id="questions">
   <h3>Quiz</h3>
-  <label>Select all options below that match the content of the passage.</label><br>
-  <input type="checkbox" class="q1" value="a"> Snowman has nine members.
-<br>
-  <input type="checkbox" class="q1" value="b"> Snowman started in 2020.
-<br>
-  <input type="checkbox" class="q1" value="c"> Snowman is famous for strong dancing.
-<br>
-  <input type="checkbox" class="q1" value="d"> Snowman only sings ballads.
-<br>
+  <label>Select all options below that match the content of the passage.</label></span>
+  <span class="question-option"><input type="checkbox" class="q1" value="a"> Snowman has nine members.
+</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="b"> Snowman started in 2020.
+</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="c"> Snowman is famous for strong dancing.
+</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="d"> Snowman only sings ballads.
+</span>
 </div>
 
 <div id="result"></div>
@@ -71,16 +134,9 @@ function finishReading() {
   if (!startTime) return alert("Please start reading first!");
   const elapsedSec = (Date.now() - startTime) / 1000;
 
-  // 正答の配列（複数正解対応）
   const correctAnswers = ["a","c"];
-
-  // 選択されたチェックボックスを取得
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
-
-  // 正答数計算（余分に選んだものもペナルティにする場合は調整可能）
   const numCorrect = checked.filter(val => correctAnswers.includes(val)).length;
-
-  // 正答率 = 選択された正答の割合
   const accuracy = numCorrect / correctAnswers.length;
 
   const rawWPM = (wordCount / elapsedSec) * 60;
@@ -96,10 +152,3 @@ function finishReading() {
 
 </body>
 </html>
-
-
-
-
-
-
-
