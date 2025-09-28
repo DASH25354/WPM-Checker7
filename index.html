@@ -31,8 +31,7 @@
   
 <!-- テキスト -->
 <div id="text">
-【3】Woven City is a new city near Mount Fuji in Japan. Toyota is building this city to test new technology and new ways to live. The city is built at the bottom of Mount Fuji, far from big cities like Tokyo. The first people to live there will be Toyota workers and old people. The city started in 2021. In Woven City, many smart machines and robots are used every day. People live in special houses with smart tools, and robots help with cleaning and safety. There are not many normal cars, so the roads are safe and clean. In the future, more people will move to Woven City. Toyota hopes the lessons from Woven City will help cities in other places. This project is important for a better future in Japan and the world.
-</div>
+【4】Kazlaser is a comedian from the group Maple Chogokin. Fumi Nikaido is an actress. On August 10, 2025, they said they got married. Kazlaser is 41 years old and Fumi Nikaido is 30 years old. They first met in 2017 on a TV show together. At that time, Fumi Nikaido said she was a big fan of Kazlaser and liked his face. People online are talking a lot about their meeting. After about eight years, they shared their happy news on Kazlaser’s X (Twitter) account. Kazlaser wrote that they got married and thanked everyone. He also said that both of them are very unique and sometimes they may have problems, but they want to have a happy family and always smile together. Many people are happy for them and wish them a happy life.</div>
 
 <!-- スタート・フィニッシュボタン -->
 <div id="controls">
@@ -44,13 +43,13 @@
 <div id="questions">
   <h3>Quiz</h3>
   <label>Select all options below that match the content of the passage.</label><br>
-  <input type="checkbox" class="q1" value="a"> Woven City is near Mount Fuji and far from big cities like Tokyo.
+  <input type="checkbox" class="q1" value="a"> Kazlaser and Fumi Nikaido met for the first time in 2025.
 <br>
-  <input type="checkbox" class="q1" value="b"> Only normal cars are allowed on the roads in Woven City.
+  <input type="checkbox" class="q1" value="b"> Kazlaser and Fumi Nikaido got married in August 2025.
 <br>
-  <input type="checkbox" class="q1" value="c"> Woven City was finished many years ago.
+  <input type="checkbox" class="q1" value="c">  Fumi Nikaido said she was a big fan of Kazlaser.
 <br>
-  <input type="checkbox" class="q1" value="d"> Toyota is the company leading the Woven City project.
+  <input type="checkbox" class="q1" value="d"> Kazlaser and Fumi Nikaido have never worked together on TV.
 <br>
 </div>
 
@@ -72,7 +71,7 @@ function finishReading() {
   const elapsedSec = (Date.now() - startTime) / 1000;
 
   // 正答の配列（複数正解対応）
-  const correctAnswers = ["a","d"];
+  const correctAnswers = ["b","c"];
 
   // 選択されたチェックボックスを取得
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
@@ -96,6 +95,7 @@ function finishReading() {
 
 </body>
 </html>
+
 
 
 
