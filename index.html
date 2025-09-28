@@ -24,14 +24,15 @@
 <!-- 音声再生 -->
 <h3>Listen to the audio:</h3>
 <audio controls>
-  <source src="4.mp3" type="audio/mpeg">
+  <source src="5.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
   
 <!-- テキスト -->
 <div id="text">
-【4】Kazlaser is a comedian from the group Maple Chogokin. Fumi Nikaido is an actress. On August 10, 2025, they said they got married. Kazlaser is 41 years old and Fumi Nikaido is 30 years old. They first met in 2017 on a TV show together. At that time, Fumi Nikaido said she was a big fan of Kazlaser and liked his face. People online are talking a lot about their meeting. After about eight years, they shared their happy news on Kazlaser’s X (Twitter) account. Kazlaser wrote that they got married and thanked everyone. He also said that both of them are very unique and sometimes they may have problems, but they want to have a happy family and always smile together. Many people are happy for them and wish them a happy life.</div>
+【5】Snowman is a famous Japanese music band. The band has nine members. They are known for their strong dancing and beautiful singing. Snowman’s songs are popular with many people, young and old. The members got together in 2012, and they worked very hard. Their first major CD came out in 2020. Since then, Snowman has become more and more popular in Japan. They often appear on TV shows and concerts. Fans love Snowman because the members are friendly and fun. They help each other and enjoy working together. Their music makes people happy and gives energy. Many people say Snowman’s live performances are exciting and full of power. Their dream is to sing to even more people in the future. Snowman wants everyone to smile and enjoy music with them.
+</div>
 
 <!-- スタート・フィニッシュボタン -->
 <div id="controls">
@@ -43,13 +44,13 @@
 <div id="questions">
   <h3>Quiz</h3>
   <label>Select all options below that match the content of the passage.</label><br>
-  <input type="checkbox" class="q1" value="a"> Kazlaser and Fumi Nikaido met for the first time in 2025.
+  <input type="checkbox" class="q1" value="a"> Snowman has nine members.
 <br>
-  <input type="checkbox" class="q1" value="b"> Kazlaser and Fumi Nikaido got married in August 2025.
+  <input type="checkbox" class="q1" value="b"> Snowman started in 2020.
 <br>
-  <input type="checkbox" class="q1" value="c">  Fumi Nikaido said she was a big fan of Kazlaser.
+  <input type="checkbox" class="q1" value="c"> Snowman is famous for strong dancing.
 <br>
-  <input type="checkbox" class="q1" value="d"> Kazlaser and Fumi Nikaido have never worked together on TV.
+  <input type="checkbox" class="q1" value="d"> Snowman only sings ballads.
 <br>
 </div>
 
@@ -71,7 +72,7 @@ function finishReading() {
   const elapsedSec = (Date.now() - startTime) / 1000;
 
   // 正答の配列（複数正解対応）
-  const correctAnswers = ["b","c"];
+  const correctAnswers = ["a","c"];
 
   // 選択されたチェックボックスを取得
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
@@ -95,6 +96,7 @@ function finishReading() {
 
 </body>
 </html>
+
 
 
 
