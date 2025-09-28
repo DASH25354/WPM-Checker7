@@ -31,7 +31,7 @@
   
 <!-- テキスト -->
 <div id="text">
-【2】The Osaka-Kansai Expo started in April with the theme “Designing Future Society for Our Lives.” Now, there are only 15 days left until the Expo closes next month. Up to June 27, more than 22 million people visited the Expo. This is more than the number needed for a positive budget. Every day, over 200,000 people visit. If this continues, about 25 million people will visit in total. This number will be higher than the Expo held in Aichi in 2005. At this Expo, people must book a date and time before coming. Now, most of the tickets for the final days are taken. Many people are trying to visit before the closing. The organizers say tickets cannot be refunded, so people with unused tickets have a problem at the end.
+【3】Woven City is a new city near Mount Fuji in Japan. Toyota is building this city to test new technology and new ways to live. The city is built at the bottom of Mount Fuji, far from big cities like Tokyo. The first people to live there will be Toyota workers and old people. The city started in 2021. In Woven City, many smart machines and robots are used every day. People live in special houses with smart tools, and robots help with cleaning and safety. There are not many normal cars, so the roads are safe and clean. In the future, more people will move to Woven City. Toyota hopes the lessons from Woven City will help cities in other places. This project is important for a better future in Japan and the world.
 </div>
 
 <!-- スタート・フィニッシュボタン -->
@@ -44,13 +44,13 @@
 <div id="questions">
   <h3>Quiz</h3>
   <label>Select all options below that match the content of the passage.</label><br>
-  <input type="checkbox" class="q1" value="a"> The Expo will continue for another two months.
+  <input type="checkbox" class="q1" value="a"> Woven City is near Mount Fuji and far from big cities like Tokyo.
 <br>
-  <input type="checkbox" class="q1" value="b"> People need to book a date and time before visiting the Expo.
+  <input type="checkbox" class="q1" value="b"> Only normal cars are allowed on the roads in Woven City.
 <br>
-  <input type="checkbox" class="q1" value="c"> All tickets can be refunded at any time.
+  <input type="checkbox" class="q1" value="c"> Woven City was finished many years ago.
 <br>
-  <input type="checkbox" class="q1" value="d"> More people have visited than the number needed for a positive budget.
+  <input type="checkbox" class="q1" value="d"> Toyota is the company leading the Woven City project.
 <br>
 </div>
 
@@ -72,7 +72,7 @@ function finishReading() {
   const elapsedSec = (Date.now() - startTime) / 1000;
 
   // 正答の配列（複数正解対応）
-  const correctAnswers = ["a","c"];
+  const correctAnswers = ["a","d"];
 
   // 選択されたチェックボックスを取得
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
@@ -96,5 +96,6 @@ function finishReading() {
 
 </body>
 </html>
+
 
 
