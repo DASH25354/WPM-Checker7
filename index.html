@@ -127,12 +127,15 @@
 
 <!-- テキスト -->
 <div id="text">
-【5】Snowman is a famous Japanese music band. The band has nine members. They are known for their strong dancing and beautiful singing. Snowman’s songs are popular with many people, young and old. The members got together in 2012, and they worked very hard. Their first major CD came out in 2020. Since then, Snowman has become more and more popular in Japan. They often appear on TV shows and concerts. Fans love Snowman because the members are friendly and fun. They help each other and enjoy working together. Their music makes people happy and gives energy. Many people say Snowman’s live performances are exciting and full of power. Their dream is to sing to even more people in the future. Snowman wants everyone to smile and enjoy music with them.</div>
+【6】Their meeting was a chance event. In 1977, Mr. Shimon Sakaguchi began immunology research at Aichi Cancer Center. During a summer lab tour, Ms. Kyoko, a Nagoya City University medical student, visited. She saw he was serious and modest, but his intense eyes in experiments were unique. They grew closer and married.
+In 1990, they moved to the United States. She liked new places, learned lab skills, and worked as his assistant. They studied regulatory T cells when many scientists said such suppressor cells did not exist. Their team was small, but they kept strong faith.
+Back in Japan, they continued. In 2003, a Nature paper listed her as first author. Their work on regulatory T cells led to the Nobel Prize. In 2025, the Karolinska Institute announced the Nobel Prize in Physiology or Medicine to Mr. Sakaguchi , a Kyoto University emeritus and Osaka University professor, and two others. yomiuri.co.jp Now she works at his startup; their lab has about 30 people, and she is the “lab mom.”
+</div>
 
 <!-- 音声再生（英文の下、ボタンの上） -->
 <div class="audio-wrapper">
   <audio controls>
-    <source src="5.mp3" type="audio/mpeg">
+    <source src="6.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
@@ -171,8 +174,8 @@ function finishReading() {
   if (!startTime) return alert("Please start reading first!");
   const elapsedSec = (Date.now() - startTime) / 1000;
 
-  // 正解選択肢: a, c
-  const correctAnswers = ["a", "c"];
+  // 正解選択肢: b, d
+  const correctAnswers = ["b", "d"];
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
   const numCorrect = checked.filter(val => correctAnswers.includes(val)).length;
   const numIncorrect = checked.filter(val => !correctAnswers.includes(val)).length;
@@ -197,6 +200,7 @@ function finishReading() {
 
 </body>
 </html>
+
 
 
 
