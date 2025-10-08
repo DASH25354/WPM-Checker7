@@ -127,15 +127,12 @@
 
 <!-- テキスト -->
 <div id="text">
-【6】Their meeting was a chance event. In 1977, Mr. Shimon Sakaguchi began immunology research at Aichi Cancer Center. During a summer lab tour, Ms. Kyoko, a Nagoya City University medical student, visited. She saw he was serious and modest, but his intense eyes in experiments were unique. They grew closer and married.
-In 1990, they moved to the United States. She liked new places, learned lab skills, and worked as his assistant. They studied regulatory T cells when many scientists said such suppressor cells did not exist. Their team was small, but they kept strong faith.
-Back in Japan, they continued. In 2003, a Nature paper listed her as first author. Their work on regulatory T cells led to the Nobel Prize. In 2025, the Karolinska Institute announced the Nobel Prize in Physiology or Medicine to Mr. Sakaguchi , a Kyoto University emeritus and Osaka University professor, and two others. yomiuri.co.jp Now she works at his startup; their lab has about 30 people, and she is the “lab mom.”
-</div>
+【7】Jane Goodall passed away last week at the age of 91. She was a pioneer in the study of chimpanzees. She went to Tanzania in her early twenties and started living with wild chimpanzees. She changed the way scientists looked at animals and humans. Scientists used to think that only humans could use tools. Goodall discovered that chimpanzees used tools to get food. Scientists thought that only humans had complex emotions. Goodall discovered that chimpanzees showed love and played together. They had friends and enemies. Mothers had close bonds with their babies. Chimpanzees even went to war and killed other chimpanzees. Goodall showed us that chimpanzees are almost human.</div>
 
 <!-- 音声再生（英文の下、ボタンの上） -->
 <div class="audio-wrapper">
   <audio controls>
-    <source src="6.mp3" type="audio/mpeg">
+    <source src="7.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
@@ -148,12 +145,13 @@ Back in Japan, they continued. In 2003, a Nature paper listed her as first autho
 <div id="questions">
   <h3>Quiz</h3>
   <label>Select all options below that match the content of the passage.</label></span>
-  <span class="question-option"><input type="checkbox" class="q1" value="a"> Snowman has nine members.
+  <span class="question-option"><input type="checkbox" class="q1" value="a"> Scientists once believed only humans could use tools.
 </span>
-  <span class="question-option"><input type="checkbox" class="q1" value="b"> Snowman started in 2020.</span>
-  <span class="question-option"><input type="checkbox" class="q1" value="c"> Snowman is famous for strong dancing.
+  <span class="question-option"><input type="checkbox" class="q1" value="b"> Goodall discovered that chimpanzees showed love and played together.</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="c"> Chimpanzee mothers had weak bonds with their babies.
 </span>
-  <span class="question-option"><input type="checkbox" class="q1" value="d"> Snowman only sings ballads.
+  <span class="question-option"><input type="checkbox" class="q1" value="d"> Goodall stayed only in laboratories and never lived with wild chimpanzees.
+
 </span>
 </div>
 
@@ -174,8 +172,8 @@ function finishReading() {
   if (!startTime) return alert("Please start reading first!");
   const elapsedSec = (Date.now() - startTime) / 1000;
 
-  // 正解選択肢: b, d
-  const correctAnswers = ["b", "d"];
+  // 正解選択肢: a, b
+  const correctAnswers = ["a", "b"];
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
   const numCorrect = checked.filter(val => correctAnswers.includes(val)).length;
   const numIncorrect = checked.filter(val => !correctAnswers.includes(val)).length;
@@ -200,6 +198,7 @@ function finishReading() {
 
 </body>
 </html>
+
 
 
 
